@@ -1,11 +1,1 @@
-#ifdef MAIN
-#define MAIN
-
-
-
-
-int _putchar(char c)
-
-
-
-#endif
+int _putchar(char c);
