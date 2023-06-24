@@ -3,7 +3,7 @@
 /**
  * print_sign - Prints the sifn of a number
  * @n: The number to be checked i think
- * Return: 1 for posotitve output, -1 for negative output or zero for anythung else
+ * Return: 1 for posotitve output, -1 for negative output 0 anythung else
  */
 
 int print_sign(int n)
