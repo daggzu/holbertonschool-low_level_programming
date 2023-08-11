@@ -20,7 +20,5 @@ size_t list_len(const list_t *h)
 		/* Move to the next node in the list */
 		h = h->next;
 	}
-
-	/* Return the final count, which represents the number of elements in the list */
 	return (count);
 }
