@@ -1,21 +1,29 @@
-#ifndef _HEADER_
-#define _HEADER_
-/**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
- */
-typedef struct op
-{
-	char *op;
-	int (*f)(int a, int b);
-} op_t;
+#include "function_pointers.h"
 
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-int (*get_op_func(char *s))(int, int);
-#endif
+/**
+  * int_index - provides the values of the array to the given function.
+  * @array: the array provided.
+  * @size: size of the array.
+  * @cmp: function that will use the code.
+  *
+  * Return: Nothing.
+  */
+
+int int_index(int *array, int size, int (*cmp)(int))
+{
+	int currVal, resultR;
+
+	if (array != NULL && size > 0 && cmp != NULL)
+	{
+		for (currVal = 0 ; currVal < size ; currVal++)
+		{
+			resultR = cmp(array[currVal]);
+			if (resultR == 1)
+			{
+				return (currVal);
+			}
+		}
+	}
+
+	return (-1);
+}
